@@ -882,6 +882,43 @@ html[data-theme="light"] .availability-note{
   }
 }
 
+
+/* Compact hero trust/footer line */
+.trust-inline{
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  gap:12px;
+  max-width:none;
+  margin-top:18px;
+  font-size:.86rem;
+}
+.trust-inline span{
+  white-space:nowrap;
+}
+.trust-inline span:last-child{
+  color:rgba(240,230,216,.68);
+}
+html[data-theme="light"] .trust-inline span:last-child{
+  color:rgba(70,61,53,.68);
+}
+.availability-note{
+  display:none;
+}
+@media(max-width:920px){
+  .trust-inline{
+    flex-wrap:wrap;
+    gap:8px 12px;
+  }
+}
+@media(max-width:740px){
+  .trust-inline{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:7px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -930,28 +967,28 @@ html[data-theme="light"] .availability-note{
       <a class="btn btn-primary" href="#individuals">Book a Session</a>
       <a class="btn btn-secondary" href="#workshops">Explore Workshops</a>
     </div>
-    <div class="trust">
+    <div class="trust trust-inline">
       <span>Private sessions</span>
       <span>Workshop inquiries</span>
       <span>Community offerings</span>
+      <span>Now booking</span>
     </div>
-    <div class="availability-note">Now booking private sessions and workshops.</div>
   </div>
 </section>
 
 <section>
   <article class="card video-card">
-    <a class="video-thumb" href="https://www.youtube.com/watch?v=WJzI9brsGWw" target="_blank" rel="noopener" aria-label="Watch Jennifer Barnett Fox 10-second explainer">
-      <img src="https://img.youtube.com/vi/WJzI9brsGWw/maxresdefault.jpg" alt="Watch Jennifer Barnett Fox 10-second explainer">
+    <a class="video-thumb" href="https://www.youtube.com/watch?v=ICsDDOrN2R4" target="_blank" rel="noopener" aria-label="Watch Jennifer Barnett Fox explainer">
+      <img src="https://img.youtube.com/vi/ICsDDOrN2R4/maxresdefault.jpg" alt="Watch Jennifer Barnett Fox explainer">
       <span class="play" aria-hidden="true"></span>
-      <span class="duration">0:10</span>
+      <span class="duration">Video</span>
     </a>
     <div class="video-copy">
       <div class="eyebrow">Start here</div>
-      <h2>Watch the 10-second explainer.</h2>
+      <h2>Watch the explainer.</h2>
       <p>A short, authentic introduction to Jennifer’s presence and the work — simple, warm, and easy to engage with.</p>
       <div class="hero-actions">
-        <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=WJzI9brsGWw" target="_blank" rel="noopener">Play Video</a>
+        <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=ICsDDOrN2R4" target="_blank" rel="noopener">Play Video</a>
       </div>
     </div>
   </article>
