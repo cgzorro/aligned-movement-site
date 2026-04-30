@@ -1567,6 +1567,100 @@ html[data-theme="light"] .about-slider::after {
   }
 }
 
+
+/* Final polish — cleaner section taglines + soft rounded image language */
+:root {
+  --image-radius: clamp(18px, 1.8vw, 26px);
+  --image-radius-soft: clamp(16px, 1.55vw, 22px);
+  --panel-radius-soft: clamp(14px, 1.25vw, 20px);
+}
+
+/* Tagline cleanup: keep support copy short and architecturally aligned. */
+#individuals .section-head > p {
+  max-width: 28ch;
+  padding-top: clamp(.8rem, 1.8vw, 1.45rem);
+  line-height: 1.42;
+}
+#offerings .section-head {
+  align-items: flex-end;
+  margin-bottom: clamp(14px, 2.2vw, 20px);
+}
+#offerings .section-head h2 {
+  max-width: 13ch;
+}
+@media (max-width: 980px) {
+  #individuals .section-head > p {
+    padding-top: 0;
+    max-width: 36ch;
+  }
+  #offerings .section-head {
+    align-items: flex-start;
+  }
+}
+
+/* Rounded image system — soft, block-like corners without making the site feel bubbly. */
+.hero-photo,
+.video-thumb,
+.about-slider-card,
+.about-slider,
+.about-slider .slide,
+.about-image,
+.about-image img,
+.about-collage,
+.about-collage img {
+  border-radius: var(--image-radius);
+}
+.video-thumb img {
+  border-radius: var(--image-radius-soft);
+}
+.hero-photo img {
+  border-radius: inherit;
+}
+.hero-photo::before,
+.video-thumb::before,
+.about-slider::after {
+  border-radius: inherit;
+}
+
+/* Give image panels a touch of breathing room on desktop so rounded corners can read cleanly. */
+@media (min-width: 981px) {
+  .hero-photo {
+    border-left: 0;
+    margin: clamp(16px, 2vw, 24px) clamp(16px, 2vw, 24px) clamp(16px, 2vw, 24px) 0;
+    min-height: 520px;
+    box-shadow: 0 18px 38px rgba(0,0,0,.16);
+  }
+  .video-thumb {
+    margin: 16px;
+  }
+}
+
+/* Slightly harmonize image-heavy panels without changing the overall editorial card language. */
+.video-card,
+.about-slider-card,
+.cta-band {
+  border-radius: var(--panel-radius-soft);
+}
+
+@media (max-width: 980px) {
+  .hero-photo {
+    margin: 16px 16px 0;
+    border-bottom: 0;
+    min-height: clamp(260px, 52vw, 420px);
+  }
+}
+@media (max-width: 740px) {
+  :root {
+    --image-radius: 18px;
+    --image-radius-soft: 16px;
+    --panel-radius-soft: 16px;
+  }
+  .hero-photo {
+    margin: 14px 14px 0;
+    min-height: 292px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1715,9 +1809,9 @@ html[data-theme="light"] .about-slider::after {
   <div class="section-head">
     <div>
       <div class="eyebrow">Two clear paths in</div>
-      <h2>Choose the support that fits where you are.</h2>
+      <h2>Begin in the way that fits your life.</h2>
     </div>
-    <p>Begin with individual support or invite Jennifer into a studio, wellness center, club, or community setting.</p>
+    <p>For individuals, studios, and community spaces.</p>
   </div>
 
   <div class="grid2">
@@ -1753,9 +1847,9 @@ html[data-theme="light"] .about-slider::after {
   <div class="section-head offerings-head">
     <div>
       <div class="eyebrow">Ways to work together</div>
-      <h2>Simple ways to begin.</h2>
+      <h2>Three ways to begin.</h2>
     </div>
-    <p>Private sessions, workshops, and community offerings make it easy to choose the right level of support.</p>
+    
   </div>
 
   <div class="grid3">
