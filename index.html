@@ -3,11 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Jennifer Barnett Fox | Block Therapy — Pan-Out Slider</title>
-<meta name="description" content="Block Therapy with Jennifer Barnett Fox — more breath, more ease, and grounded support for a calmer, more connected life.">
+<title>Jennifer Barnett Fox | Block Therapy in Kansas City</title>
+<meta name="description" content="Block Therapy with Jennifer Barnett Fox in Kansas City — private sessions, workshops, and community offerings for breath, release, and body awareness.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!--
+  Future connection points
+  1) Google Analytics: replace the empty GA value with Jennifer's GA4 Measurement ID, e.g. G-XXXXXXXXXX.
+  2) Booking/newsletter: replace the empty URLs below once Jennifer chooses her scheduler/newsletter platform.
+-->
+<script>
+window.JBF_SITE_CONFIG = {
+  bookingUrl: "",
+  workshopInquiryUrl: "",
+  newsletterActionUrl: "",
+  contactEmail: ""
+};
+window.JBF_GA_MEASUREMENT_ID = "";
+</script>
+<script>
+(function(){
+  const id = window.JBF_GA_MEASUREMENT_ID;
+  if (!id) return;
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
+  document.head.appendChild(script);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ window.dataLayer.push(arguments); }
+  window.gtag = window.gtag || gtag;
+  gtag('js', new Date());
+  gtag('config', id);
+})();
+</script>
 <style>
 :root {
   --bg:#11100f;
@@ -943,7 +973,7 @@ html[data-theme="light"] .trust-inline span:last-child{
       <a href="#contact">Contact</a>
     </nav>
     <div class="actions">
-      <a class="btn btn-primary" href="#individuals">Book a Session</a>
+      <a class="btn btn-primary" data-booking-link href="#contact">Start a Conversation</a>
       <button id="themeToggle" class="toggle" type="button" aria-label="Toggle color theme">
         <span class="track"><span>☾</span><span>☀</span></span>
         <span class="thumb" aria-hidden="true"></span>
@@ -958,18 +988,18 @@ html[data-theme="light"] .trust-inline span:last-child{
   </div>
 
   <div class="hero-copy">
-    <div class="eyebrow">A calm, elevated welcome</div>
+    <div class="eyebrow">Block Therapy in Kansas City</div>
     <h1>More breath.<br>More ease.</h1>
-    <div class="hero-sub">Support for a calmer, more connected way of living.</div>
-    <p>Block Therapy with Jennifer Barnett Fox is warm, grounded, and deeply human — a gentle return to breath, ease, and trust.</p>
-    <p>Begin with a private session, a workshop, or a community offering.</p>
+    <div class="hero-sub">Private sessions, workshops, and community offerings for a calmer, more connected way of living.</div>
+    <p>Block Therapy with Jennifer Barnett Fox is a guided breath-and-bodywork practice designed to help you soften tension, reconnect with your body, and create more space for ease.</p>
+    <p>Serving private clients, studios, and wellness communities throughout the Kansas City area.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#individuals">Book a Session</a>
+      <a class="btn btn-primary" data-booking-link href="#contact">Start a Conversation</a>
       <a class="btn btn-secondary" href="#workshops">Explore Workshops</a>
     </div>
     <div class="trust trust-inline">
       <span>Private sessions</span>
-      <span>Workshop inquiries</span>
+      <span>Studio workshops</span>
       <span>Community offerings</span>
       <span>Now booking</span>
     </div>
@@ -978,21 +1008,49 @@ html[data-theme="light"] .trust-inline span:last-child{
 
 <section>
   <article class="card video-card">
-    <a class="video-thumb" href="https://www.youtube.com/watch?v=ICsDDOrN2R4" target="_blank" rel="noopener" aria-label="Watch Jennifer Barnett Fox explainer">
-      <img src="https://img.youtube.com/vi/ICsDDOrN2R4/maxresdefault.jpg" alt="Watch Jennifer Barnett Fox explainer">
+    <a class="video-thumb" href="https://www.youtube.com/watch?v=ICsDDOrN2R4" target="_blank" rel="noopener" aria-label="Watch Jennifer Barnett Fox 30-second explainer">
+      <img src="https://img.youtube.com/vi/ICsDDOrN2R4/maxresdefault.jpg" alt="Watch Jennifer Barnett Fox 30-second explainer">
       <span class="play" aria-hidden="true"></span>
-      <span class="duration">Video</span>
+      <span class="duration">0:30</span>
     </a>
     <div class="video-copy">
       <div class="eyebrow">Start here</div>
-      <h2>Watch the explainer.</h2>
-      <p>A short, authentic introduction to Jennifer’s presence and the work — simple, warm, and easy to engage with.</p>
+      <h2>See what the work feels like.</h2>
+      <p>A short, authentic introduction to Jennifer’s presence and the practice — simple, warm, and easy to engage with.</p>
       <div class="hero-actions">
         <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=ICsDDOrN2R4" target="_blank" rel="noopener">Play Video</a>
       </div>
     </div>
   </article>
 <p style="margin-top:12px;color:rgba(240,230,216,.55);font-size:.85rem;text-align:center;">A life shaped by movement, craft, travel, and presence.</p>
+</section>
+
+<section id="block-therapy">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">What is Block Therapy?</div>
+      <h2>A gentle practice for breath, release, and body awareness.</h2>
+    </div>
+    <p>Block Therapy is a guided breath-and-bodywork practice using a specialized therapeutic block to support release, alignment, circulation, and deeper body awareness. Jennifer’s approach is calm, accessible, and grounded — meeting each person where they are.</p>
+  </div>
+
+  <div class="grid3">
+    <article class="card pad">
+      <div class="icon sage">◌</div>
+      <h3>Breath</h3>
+      <p>Slow, guided support for reconnecting to the breath and creating more internal space.</p>
+    </article>
+    <article class="card pad">
+      <div class="icon blue">◎</div>
+      <h3>Tension Release</h3>
+      <p>A restorative way to soften held patterns and support a more easeful relationship with the body.</p>
+    </article>
+    <article class="card pad">
+      <div class="icon sand">❦</div>
+      <h3>Body Awareness</h3>
+      <p>Simple, grounded practices that help you notice, listen, and move through life with more trust.</p>
+    </article>
+  </div>
 </section>
 
 <section id="about">
@@ -1015,12 +1073,14 @@ html[data-theme="light"] .trust-inline span:last-child{
 <article class="card pad">
       <div class="eyebrow">About Jennifer</div>
       <h2>Rooted in presence. Guided by empathy.</h2>
-      <p>Jennifer brings calm authority, warmth, and lived movement experience to this work. Her approach is supportive, grounded, and deeply human — helping people return to their bodies with more breath, more ease, and more trust.</p>
+      <p>Jennifer brings calm authority, warmth, and lived movement experience to this work. She is a certified Block Therapy instructor, Yoga and Pilates teacher, and seasoned movement educator with 15+ years of teaching experience.</p>
+      <p>Her approach is supportive, grounded, and deeply human — helping people return to their bodies with more breath, more ease, and more trust.</p>
       <p>Her work is shaped by years of teaching, movement, travel, creativity, and close attention to what helps people feel more at home in themselves.</p>
+      <div class="bio-note">Certified Block Therapy instructor · Yoga and Pilates teacher · 15+ years teaching movement and restorative practices.</div>
       <details class="bio-expander">
         <summary>Read Jennifer’s story</summary>
         <div class="bio-body">
-          <p>Jennifer’s work is shaped by years of teaching, creating, listening, and helping people feel more at home in their bodies. Her background spans yoga, Pilates, movement education, content strategy, marketing, and a lifelong curiosity about how people heal, grow, and reconnect with themselves.</p>
+          <p>Jennifer’s work is shaped by years of teaching, creating, listening, and helping people feel more at home in their bodies. Her background spans Block Therapy, yoga, Pilates, movement education, content strategy, marketing, and a lifelong curiosity about how people heal, grow, and reconnect with themselves.</p>
           <p>She brings an old-soul steadiness to the room: practical, creative, deeply empathetic, and quietly strong. Whether she is guiding a private session, leading a workshop, or supporting a community partner, her gift is helping people slow down enough to notice what their bodies already know.</p>
           <div class="bio-note">The work is simple, but not small: more breath, more ease, more trust, and more room to move through life with steadiness.</div>
         </div>
@@ -1037,9 +1097,9 @@ html[data-theme="light"] .trust-inline span:last-child{
   <div class="section-head">
     <div>
       <div class="eyebrow">Two clear paths in</div>
-      <h2>Funnel ease, without losing elegance.</h2>
+      <h2>Choose the support that fits where you are.</h2>
     </div>
-    <p>Visitors can self-select into individual support or partner-style offerings quickly, without the page ever feeling pushy.</p>
+    <p>Begin with individual support or invite Jennifer into a studio, wellness center, club, or community setting.</p>
   </div>
 
   <div class="grid2">
@@ -1052,20 +1112,20 @@ html[data-theme="light"] .trust-inline span:last-child{
         <li>Beginner-friendly, premium support</li>
       </ul>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Book a Session</a>
+        <a class="btn btn-primary" data-booking-link href="#contact">Book a Session</a>
       </div>
     </article>
 
     <article class="card pad" id="workshops">
       <h3>For Studios &amp; Community Partners</h3>
-      <p>For yoga studios, Pilates communities, wellness spaces, clubs, and organizations looking for something refined and easy to say yes to.</p>
+      <p>Bring a calm, restorative experience to yoga studios, Pilates communities, wellness spaces, clubs, retreats, and community organizations.</p>
       <ul class="list">
-        <li>Workshops &amp; speaking</li>
-        <li>Community programming</li>
-        <li>Partnership inquiries</li>
+        <li>Introductory workshops</li>
+        <li>Small-group sessions</li>
+        <li>Custom community programming</li>
       </ul>
       <div class="hero-actions">
-        <a class="btn btn-secondary" href="#contact">Request Workshop Info</a>
+        <a class="btn btn-secondary" data-workshop-link href="#contact">Request Workshop Info</a>
       </div>
     </article>
   </div>
@@ -1075,30 +1135,30 @@ html[data-theme="light"] .trust-inline span:last-child{
   <div class="section-head">
     <div>
       <div class="eyebrow">Ways to work together</div>
-      <h2>Strategic offerings, expressed simply.</h2>
+      <h2>Simple ways to begin.</h2>
     </div>
-    <p>Clean cards, clear value, and understated CTA language keep the page feeling high-end rather than hard-selling.</p>
+    <p>Private sessions, workshops, and community offerings make it easy to choose the right level of support.</p>
   </div>
 
   <div class="grid3">
     <article class="card pad">
       <div class="icon sage">◌</div>
       <h3>Private Sessions</h3>
-      <p>Personalized 1:1 support to help you regulate, release, and reconnect.</p>
+      <p>Personalized 1:1 support to help you breathe, release, and reconnect with more ease.</p>
       <a class="btn btn-secondary" href="#contact">Learn More</a>
     </article>
 
     <article class="card pad">
       <div class="icon blue">◎</div>
       <h3>Workshops</h3>
-      <p>Interactive experiences that bring nervous system tools to life in community.</p>
+      <p>Introductory and specialty workshops for studios, wellness spaces, clubs, and community groups.</p>
       <a class="btn btn-secondary" href="#contact">Learn More</a>
     </article>
 
     <article class="card pad">
       <div class="icon sand">❦</div>
       <h3>Community Offerings</h3>
-      <p>Groups and ongoing programs designed to deepen connection, resilience, and healing.</p>
+      <p>Calm, accessible offerings for retreats, local groups, clubs, and wellness-centered communities.</p>
       <a class="btn btn-secondary" href="#contact">Learn More</a>
     </article>
   </div>
@@ -1108,7 +1168,7 @@ html[data-theme="light"] .trust-inline span:last-child{
   <div class="section-head">
     <div>
       <div class="eyebrow">Kind words</div>
-      <h2>Trust-building, without the clutter.</h2>
+      <h2>Gentle trust, grounded experience.</h2>
     </div>
   </div>
 
@@ -1142,11 +1202,25 @@ html[data-theme="light"] .trust-inline span:last-child{
   <div class="grid2">
     <article class="card pad">
       <h3>Book or inquire</h3>
-      <p>This is where Jennifer’s scheduler, email link, or workshop inquiry form would go in the live version.</p>
+      <p>Private sessions, workshops, and community partnerships are now being welcomed in the Kansas City area. Jennifer’s preferred booking method can be connected here as soon as it is selected.</p>
+      <ul class="list">
+        <li>Private Block Therapy sessions</li>
+        <li>Studio and wellness-center workshops</li>
+        <li>Community, club, and small-group offerings</li>
+      </ul>
+      <div class="hero-actions">
+        <a class="btn btn-primary" data-booking-link href="#contact">Book a Session</a>
+        <a class="btn btn-secondary" data-workshop-link href="#contact">Request Workshop Info</a>
+      </div>
     </article>
     <article class="card pad">
-      <h3>One elegant file</h3>
-      <p>The sun / moon toggle keeps one sophisticated experience instead of separate dark and light builds.</p>
+      <h3>Stay connected</h3>
+      <p>Join Jennifer’s newsletter for gentle notes, thoughtful resources, and updates on private sessions, workshops, and community offerings.</p>
+      <form class="email-row" id="newsletterForm">
+        <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+        <button type="submit" aria-label="Submit email">→</button>
+      </form>
+      <p class="meta" style="margin-top:10px;">Newsletter connection is ready for Jennifer’s preferred platform.</p>
     </article>
   </div>
 </section>
@@ -1172,10 +1246,10 @@ html[data-theme="light"] .trust-inline span:last-child{
   <div class="newsletter">
     <div class="eyebrow" style="margin-bottom:6px;">Stay inspired</div>
     <p style="margin:0;">Gentle notes and thoughtful resources delivered to your inbox.</p>
-    <div class="email-row">
-      <input type="email" placeholder="Email address" aria-label="Email address">
-      <button type="button" aria-label="Submit email">→</button>
-    </div>
+    <form class="email-row" id="footerNewsletterForm">
+      <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+      <button type="submit" aria-label="Submit email">→</button>
+    </form>
   </div>
 </footer>
 
@@ -1199,6 +1273,49 @@ html[data-theme="light"] .trust-inline span:last-child{
     root.setAttribute('data-theme', next);
     localStorage.setItem('jbf-theme', next);
   });
+})();
+</script>
+
+<script>
+(function(){
+  const cfg = window.JBF_SITE_CONFIG || {};
+
+  function updateLinks(selector, url){
+    if (!url) return;
+    document.querySelectorAll(selector).forEach(function(link){
+      link.href = url;
+      if (/^https?:/i.test(url)) {
+        link.target = '_blank';
+        link.rel = 'noopener';
+      }
+    });
+  }
+
+  updateLinks('[data-booking-link]', cfg.bookingUrl);
+  updateLinks('[data-workshop-link]', cfg.workshopInquiryUrl || cfg.bookingUrl);
+
+  function handleNewsletter(form){
+    if (!form) return;
+    form.addEventListener('submit', function(event){
+      if (cfg.newsletterActionUrl) {
+        form.action = cfg.newsletterActionUrl;
+        form.method = 'post';
+        return;
+      }
+      event.preventDefault();
+      const email = form.querySelector('input[type="email"]')?.value || '';
+      const subject = encodeURIComponent('Newsletter signup');
+      const body = encodeURIComponent('Please add me to Jennifer Barnett Fox’s Block Therapy newsletter.\n\nEmail: ' + email);
+      if (cfg.contactEmail) {
+        window.location.href = 'mailto:' + cfg.contactEmail + '?subject=' + subject + '&body=' + body;
+      } else {
+        alert('Newsletter signup is ready to connect. Add Jennifer’s newsletter platform URL or contact email in JBF_SITE_CONFIG.');
+      }
+    });
+  }
+
+  handleNewsletter(document.getElementById('newsletterForm'));
+  handleNewsletter(document.getElementById('footerNewsletterForm'));
 })();
 </script>
 
