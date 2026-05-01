@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Jennifer Barnett Fox | Block Therapy — Pan-Out Slider</title>
-<meta name="description" content="Block Therapy with Jennifer Barnett Fox — more breath, more ease, and grounded support for a calmer, more connected life.">
+<title>Block Therapy in Kansas City | Jennifer Barnett Fox</title>
+<meta name="description" content="Block Therapy in Kansas City with Jennifer Barnett Fox. Private sessions, workshops, and community offerings for breath, ease, body awareness, and grounded support.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -1654,6 +1654,111 @@ html[data-theme="light"] .hero .trust-inline span:last-child{
   }
 }
 
+
+/* Production conversion polish */
+.hero-photo{
+  border-radius:32px;
+  overflow:hidden;
+  box-shadow:0 22px 70px rgba(0,0,0,.34);
+  border:1px solid rgba(229,215,197,.12);
+}
+.hero-photo img{
+  border-radius:32px;
+}
+.hero-photo::before{
+  border-radius:32px;
+}
+.hero-photo::after{
+  border-radius:32px;
+}
+
+.btn-primary:hover{
+  box-shadow:0 10px 32px rgba(154,173,184,.24);
+}
+
+.funnel-cards .card{
+  position:relative;
+}
+.funnel-cards .card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:18px;
+  pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.025);
+}
+
+.mini-form{
+  display:grid;
+  gap:13px;
+  margin-top:18px;
+}
+.mini-form label{
+  display:grid;
+  gap:7px;
+  color:var(--muted);
+  font-size:.86rem;
+  letter-spacing:.03em;
+}
+.mini-form input,
+.mini-form select,
+.mini-form textarea{
+  width:100%;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.025);
+  color:var(--text);
+  border-radius:14px;
+  padding:13px 14px;
+  font:inherit;
+  outline:none;
+}
+.mini-form textarea{
+  resize:vertical;
+}
+.mini-form input:focus,
+.mini-form select:focus,
+.mini-form textarea:focus{
+  border-color:rgba(154,173,184,.55);
+  box-shadow:0 0 0 3px rgba(154,173,184,.10);
+}
+
+.video-card-embed{
+  border-radius:22px;
+}
+.video-embed-wrap{
+  border-radius:18px;
+  overflow:hidden;
+}
+
+section{
+  scroll-margin-top:30px;
+}
+
+/* Mobile conversion polish */
+@media(max-width:740px){
+  .hero-photo{
+    display:none !important;
+  }
+  .hero{
+    padding-top:28px;
+  }
+  .hero .trust-inline{
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:14px 16px;
+    background:rgba(255,255,255,.018);
+  }
+  .video-card-embed,
+  .card{
+    border-radius:20px;
+  }
+  .mini-form input,
+  .mini-form select,
+  .mini-form textarea{
+    font-size:16px;
+  }
+}
+
 </style>
 
 <!-- Google Analytics 4: replace G-XXXXXXXXXX with Jennifer's Measurement ID -->
@@ -1663,6 +1768,28 @@ html[data-theme="light"] .hero .trust-inline span:last-child{
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+
+<meta property="og:title" content="Jennifer Barnett Fox | Block Therapy in Kansas City">
+<meta property="og:description" content="Gentle, grounded Block Therapy for more breath, more ease, and a calmer way of living.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jennifer Barnett Fox Block Therapy",
+  "description": "Block Therapy private sessions, workshops, and community offerings in Kansas City.",
+  "areaServed": "Kansas City",
+  "founder": {
+    "@type": "Person",
+    "name": "Jennifer Barnett Fox"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/jenniferbarnettfox/"
+  ]
+}
 </script>
 
 </head>
@@ -1688,7 +1815,7 @@ html[data-theme="light"] .hero .trust-inline span:last-child{
       <a href="#contact">Contact</a>
     </nav>
     <div class="actions">
-      <a class="btn btn-primary" href="#individuals">Book a Session</a>
+      <a class="btn btn-primary" href="#individuals">Start a Conversation</a>
       <button id="themeToggle" class="toggle" type="button" aria-label="Toggle color theme">
         <span class="track"><span>☾</span><span>☀</span></span>
         <span class="thumb" aria-hidden="true"></span>
@@ -1707,9 +1834,9 @@ html[data-theme="light"] .hero .trust-inline span:last-child{
     <h1>More breath.<br>More ease.</h1>
     <div class="hero-sub">Support for a calmer, more connected way of living.</div>
     <p>Block Therapy with Jennifer Barnett Fox is warm, grounded, and deeply human — a gentle return to breath, ease, and trust.</p>
-    <p>Begin with a private session, a workshop, or a community offering.</p>
+    <p>Begin with a private session, workshop, or community offering.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#individuals">Book a Session</a>
+      <a class="btn btn-primary" href="#individuals">Start a Conversation</a>
       <a class="btn btn-secondary" href="#workshops">Explore Workshops</a>
     </div>
     <div class="trust trust-inline">
@@ -1742,6 +1869,62 @@ html[data-theme="light"] .hero .trust-inline span:last-child{
   </article>
 <p style="margin-top:12px;color:rgba(240,230,216,.55);font-size:.85rem;text-align:center;">A life shaped by movement, craft, travel, and presence.</p>
 </section>
+
+
+<section id="start">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Start here</div>
+      <h2>Choose the path that fits.</h2>
+    </div>
+    <p>Whether you are curious as an individual, planning a workshop, or exploring a community partnership, the next step should feel simple and low-pressure.</p>
+  </div>
+
+  <div class="grid3 funnel-cards">
+    <article class="card pad">
+      <div class="icon sage">◌</div>
+      <h3>Private Sessions</h3>
+      <p>For individuals seeking more breath, ease, body awareness, and support in daily life.</p>
+      <ul class="list">
+        <li>Intro conversation</li>
+        <li>Personalized session path</li>
+        <li>Gentle, beginner-friendly support</li>
+      </ul>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#lead-capture">Start a Conversation</a>
+      </div>
+    </article>
+
+    <article class="card pad">
+      <div class="icon blue">◎</div>
+      <h3>Workshops</h3>
+      <p>For studios, wellness spaces, clubs, and organizations looking for a grounded, meaningful offering.</p>
+      <ul class="list">
+        <li>Studio workshops</li>
+        <li>Community education</li>
+        <li>Special events</li>
+      </ul>
+      <div class="hero-actions">
+        <a class="btn btn-secondary" href="#workshop-inquiry">Request Workshop Info</a>
+      </div>
+    </article>
+
+    <article class="card pad">
+      <div class="icon sand">❦</div>
+      <h3>Stay Connected</h3>
+      <p>For people who want gentle notes, resources, and future workshop announcements from Jennifer.</p>
+      <ul class="list">
+        <li>Practice notes</li>
+        <li>Event updates</li>
+        <li>Simple body-awareness tools</li>
+      </ul>
+      <div class="hero-actions">
+        <a class="btn btn-secondary" href="#newsletter">Join the List</a>
+      </div>
+    </article>
+  </div>
+</section>
+
 
 <section id="about">
   <div class="about-grid">
@@ -1800,7 +1983,7 @@ html[data-theme="light"] .hero .trust-inline span:last-child{
         <li>Beginner-friendly, premium support</li>
       </ul>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Book a Session</a>
+        <a class="btn btn-primary" href="#contact">Start a Conversation</a>
       </div>
     </article>
 
@@ -1886,18 +2069,43 @@ html[data-theme="light"] .hero .trust-inline span:last-child{
   </article>
 </section>
 
-<section id="contact">
+
+<section id="lead-capture">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Begin gently</div>
+      <h2>Start a conversation.</h2>
+    </div>
+    <p>A simple inquiry form keeps the next step easy. This can connect to Google Forms, Squarespace, Shopify Forms, Mailchimp, ConvertKit, or Jennifer’s scheduler when ready.</p>
+  </div>
+
   <div class="grid2">
     <article class="card pad">
-      <h3>Book or inquire</h3>
-      <p>This is where Jennifer’s scheduler, email link, or workshop inquiry form would go in the live version.</p>
+      <h3>Private Session Inquiry</h3>
+      <p>For individual sessions, questions, or a first conversation with Jennifer.</p>
+      <form class="mini-form" action="#" method="post">
+        <label>First name<input type="text" name="first_name" placeholder="First name"></label>
+        <label>Email<input type="email" name="email" placeholder="Email address"></label>
+        <label>What are you interested in?<select name="interest"><option>Private session</option><option>Workshop</option><option>Community offering</option><option>General question</option></select></label>
+        <label>Message<textarea name="message" rows="4" placeholder="Share a little about what you are looking for."></textarea></label>
+        <button class="btn btn-primary" type="submit">Send Inquiry</button>
+      </form>
     </article>
-    <article class="card pad">
-      <h3>One elegant file</h3>
-      <p>The sun / moon toggle keeps one sophisticated experience instead of separate dark and light builds.</p>
+
+    <article class="card pad" id="workshop-inquiry">
+      <h3>Workshop / Partner Inquiry</h3>
+      <p>For studios, wellness spaces, community centers, clubs, and organizations interested in hosting Jennifer.</p>
+      <form class="mini-form" action="#" method="post">
+        <label>Organization<input type="text" name="organization" placeholder="Studio, club, or organization"></label>
+        <label>Email<input type="email" name="partner_email" placeholder="Email address"></label>
+        <label>Type of offering<select name="offering"><option>Workshop</option><option>Community class</option><option>Private group</option><option>Speaking / education</option></select></label>
+        <label>Notes<textarea name="partner_notes" rows="4" placeholder="Tell Jennifer about your group, timing, and goals."></textarea></label>
+        <button class="btn btn-secondary" type="submit">Request Workshop Info</button>
+      </form>
     </article>
   </div>
 </section>
+
 
 <footer class="footer">
   <div class="small-brand">
@@ -1917,9 +2125,9 @@ html[data-theme="light"] .hero .trust-inline span:last-child{
     <a href="#top">Top</a>
   </div>
 
-  <div class="newsletter">
+  <div class="newsletter" id="newsletter">
     <div class="eyebrow" style="margin-bottom:6px;">Stay inspired</div>
-    <p style="margin:0;">Gentle notes and thoughtful resources delivered to your inbox.</p>
+    <p style="margin:0;">Gentle notes, thoughtful resources, and workshop updates delivered to your inbox.</p>
     <div class="email-row">
       <input type="email" placeholder="Email address" aria-label="Email address">
       <button type="button" aria-label="Submit email">→</button>
