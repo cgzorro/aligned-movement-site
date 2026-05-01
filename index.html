@@ -1856,6 +1856,67 @@ section{
   }
 }
 
+
+/* Restore rounded hero image on mobile */
+@media(max-width:740px){
+  .hero{
+    display:flex !important;
+    flex-direction:column;
+    gap:24px;
+    padding:24px 20px 32px;
+  }
+
+  .hero-photo{
+    display:block !important;
+    position:relative !important;
+    inset:auto !important;
+    order:0;
+    width:100%;
+    height:auto;
+    min-height:0;
+    aspect-ratio:4 / 3;
+    border-radius:26px;
+    overflow:hidden;
+    border:1px solid rgba(78,63,49,.14);
+    box-shadow:0 18px 38px rgba(83,60,37,.10);
+  }
+
+  html[data-theme="dark"] .hero-photo{
+    border-color:rgba(229,215,197,.14);
+    box-shadow:0 18px 44px rgba(0,0,0,.28);
+  }
+
+  .hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    transform:none !important;
+    filter:saturate(.86) contrast(.97) brightness(.98);
+    border-radius:26px;
+  }
+
+  .hero-photo::before{
+    border-radius:26px;
+    background:
+      linear-gradient(180deg,rgba(17,16,15,.06),rgba(17,16,15,.18)),
+      radial-gradient(circle at 50% 20%,transparent 0%,rgba(17,16,15,.10) 62%,rgba(17,16,15,.25) 100%);
+  }
+
+  .hero-photo::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:26px;
+    pointer-events:none;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+  }
+
+  .hero-copy{
+    order:1;
+  }
+}
+
 </style>
 
 <!-- Google Analytics 4: replace G-XXXXXXXXXX with Jennifer's Measurement ID -->
