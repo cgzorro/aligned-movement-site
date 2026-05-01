@@ -3193,102 +3193,53 @@ html[data-theme="light"] #start .funnel-cards .card:hover{
 }
 
 
-/* Header cleanup: simpler brand lockup + straight nav */
-.header{
-  grid-template-columns:auto 1fr auto;
-  gap:28px;
-  padding:18px 24px 14px;
+/* Jennifer story hybrid refinement */
+.story-body{max-width:68ch;}
+.story-body h3{
+  margin-top:26px;margin-bottom:10px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(1.45rem,2.4vw,2rem);
+  line-height:1.1;color:var(--text);
 }
-
-.brand-sub{
-  letter-spacing:.24em;
+.story-body h3:first-child{margin-top:0;}
+.story-body p{margin-bottom:13px;}
+.story-body em{font-style:italic;color:var(--text);}
+.credibility-strip{
+  margin-top:28px;padding-top:18px;border-top:1px solid var(--line);
+  text-align:left;max-width:560px;
 }
-
-.header .nav-links{
-  display:flex;
-  flex-wrap:nowrap;
-  justify-content:center;
-  align-items:center;
-  gap:42px;
-  white-space:nowrap;
+.credibility-strip h4{
+  font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 12px;font-weight:700;
 }
-
-.header .nav-links a{
-  white-space:nowrap;
+.credibility-strip p{
+  margin:4px 0;font-size:.95rem;color:var(--text);opacity:.86;
 }
-
-.header .actions{
-  display:flex;
-  align-items:center;
-  gap:16px;
+.story-cta{
+  margin-top:28px;padding:20px;border:1px solid var(--line);border-radius:18px;
+  background:radial-gradient(circle at 12% 15%,rgba(197,169,139,.10),transparent 30%),rgba(255,255,255,.025);
 }
-
-/* Section head polish: center supporting copy against headline */
-@media(min-width:741px){
-  .section-head{
-    align-items:center !important;
-  }
-
-  .section-head > p{
-    align-self:center;
-    margin-top:0;
-    max-width:44ch;
-  }
-
-  #start .section-head{
-    grid-template-columns:minmax(0,.92fr) minmax(360px,.72fr);
-    align-items:center !important;
-    gap:54px;
-    margin-bottom:18px !important;
-  }
-
-  #start .section-head > p{
-    align-self:center;
-  }
+.story-cta p{
+  margin-bottom:12px;color:var(--text);font-family:Georgia,"Times New Roman",serif;font-size:1.25rem;
 }
-
-/* Mobile keeps the clean stacked hierarchy */
+.about-grid:has(.bio-expander[open]) .quote-panel,.about-grid.bio-open .quote-panel{align-self:start;}
+.about-grid:has(.bio-expander[open]) .about-slider-card,.about-grid.bio-open .about-slider-card{
+  transform:scale(.9);transform-origin:top left;
+}
+.about-grid:has(.bio-expander[open]) .about-slider,.about-grid.bio-open .about-slider{
+  min-height:340px !important;aspect-ratio:4/3 !important;
+}
+@media(max-width:980px){
+  .about-grid:has(.bio-expander[open]) .about-slider-card,.about-grid.bio-open .about-slider-card{transform:none;}
+  .about-grid:has(.bio-expander[open]) .about-slider,.about-grid.bio-open .about-slider{min-height:320px !important;}
+}
 @media(max-width:740px){
-  .header{
-    grid-template-columns:1fr auto;
-    gap:12px 14px;
-    padding:18px 20px 16px;
-  }
-
-  .brand-sub{
-    letter-spacing:.18em;
-  }
-
-  .header .nav-links{
-    grid-column:1 / -1;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    justify-items:start;
-    gap:12px 28px;
-    font-size:.72rem;
-    letter-spacing:.10em;
-    margin-top:4px;
-  }
-
-  .header .actions{
-    grid-column:1 / -1;
-    display:grid;
-    grid-template-columns:1fr auto;
-    gap:12px;
-    width:100%;
-  }
-}
-
-@media(min-width:741px) and (max-width:1080px){
-  .header{
-    grid-template-columns:1fr;
-    justify-items:center;
-    text-align:center;
-  }
-
-  .header .actions{
-    justify-content:center;
-  }
+  .story-body{max-width:100%;}
+  .story-body h3{font-size:clamp(1.55rem,8vw,2.05rem);margin-top:24px;}
+  .credibility-strip{max-width:100%;}
+  .story-cta{padding:18px;}
+  .story-cta .btn{width:100%;}
+  .about-grid:has(.bio-expander[open]) .about-slider,.about-grid.bio-open .about-slider{min-height:285px !important;}
 }
 
 </style>
@@ -3544,17 +3495,51 @@ html[data-theme="light"] #start .funnel-cards .card:hover{
 
       <details class="bio-expander">
         <summary>Read Jennifer’s Story</summary>
-        <div class="bio-body">
-          <p>Since I was young, the importance of movement has felt intuitive. I didn’t know why, but I liked to move, and I think and feel better when I’m able to move.</p>
-          <p>In school, I played basketball, volleyball, tennis, threw the shot put and discus and ran relay in track. Later, I found yoga and then Pilates. These practices opened up a new way of connecting with movement, allowing me to combine the activity I’ve always loved with mind, body and breath practices.</p>
-          <p>This led me to earn certifications in vinyasa yoga and Pilates, teaching the original 34-pose flow created by Joseph Pilates. As a full-time writer and marketer, I’ve taught yoga and Pilates in corporate settings over lunch hours, after work and on weekends at studios and community centers throughout the Kansas City area.</p>
-          <p>I was also a Runner’s Edge pacer for many half-marathons in KC and competed in a marathon, Olympic-distance triathlon and a century cycle ride to raise money for the Leukemia & Lymphoma Society’s Team in Training.</p>
-          <p>My own injuries, chronic headaches, asthma, eczema and workplace and life stress found me looking for something more. After going down a number of rabbit holes, I came across Block Therapy and its work with fascia, the body’s connective tissue.</p>
-          <p>For me, Block Therapy has become the “missing link” and a helpful complement to all of the other things I want and love to do. By working to release adhesions in the fascia, I find it easier to breathe and I stand taller.</p>
-          <p>My logo of a robin on a block is a symbol of that sense of renewal. My hope is that this cheeky robin named George communicates a sense of balance, grounding and lightness in the mind and body.</p>
-          <div class="bio-note">I see the combination of yoga, Pilates and Block Therapy as a way to connect with and honor the body through intentional, integrated movement and better breathing.</div>
+        <div class="bio-body story-body">
+          <h3>Jennifer’s Story</h3>
+          <p><strong>You don’t have to live in a body that feels tight, tired, or disconnected.</strong></p>
+          <p>For years, I moved through life the way many of us do — pushing through discomfort, managing tension, doing all the “right” things… but never quite feeling at ease in my body.</p>
+          <p>I found yoga. Then Pilates. Both helped — but something still felt missing.</p>
+          <p>It wasn’t until I discovered Block Therapy that things truly began to shift.</p>
+          <p>Not in a dramatic, overnight way.<br>But in a quiet, honest, lasting way.</p>
+          <p>My breath deepened.<br>My body softened.<br>And for the first time, I felt like I could actually <em>listen</em> to what my body was asking for.</p>
+          <p>That’s what this work is about.</p>
+          <p>Not fixing you.<br>Not pushing you.<br>Not asking you to become someone else.</p>
+          <p>But helping you return — gently — to a body that feels more open, more supported, and more like home.</p>
+          <p><strong>You can begin exactly as you are.</strong></p>
+
+          <h3>The path that brought me here</h3>
+          <p>Movement has always been something I’ve returned to — because I feel better when I move.</p>
+          <p>Over time, that curiosity led me through yoga and Pilates, where I began to understand movement not just as activity, but as a relationship between body, breath, and awareness.</p>
+          <p>I went on to train and teach both in studios, community spaces, and corporate settings throughout Kansas City — helping people reconnect with their bodies in simple, practical ways.</p>
+          <p>Along the way, I challenged myself physically — pacing half marathons, completing a marathon, an Olympic-distance triathlon, and a century ride in support of the Leukemia &amp; Lymphoma Society.</p>
+          <p>But like many people, I was also navigating my own challenges — injuries, chronic headaches, asthma, eczema, and the quiet accumulation of stress from work and life.</p>
+          <p>I knew there had to be something more.</p>
+          <p>That search eventually led me to Block Therapy and the role of fascia — the body’s connective tissue — in how we move, breathe, and feel.</p>
+          <p>For me, it became the missing link.</p>
+          <p>Breathing became easier.<br>Posture felt more natural.<br>And my body began to feel more supported from the inside out.</p>
+
+          <h3>Why the robin</h3>
+          <p>The robin you see in my logo — a small, steady presence perched on a block — is a symbol of that shift.</p>
+          <p>A sense of renewal.<br>Of grounding.<br>Of lightness returning.</p>
+          <p>Sometimes, it begins with something simple.</p>
+          <p>A breath.<br>A pause.<br>A small shift.</p>
+
+          <div class="credibility-strip">
+            <h4>A quiet foundation of experience</h4>
+            <p>Yoga &amp; Pilates Instructor</p>
+            <p>Runner’s Edge Pacer (KC Half Marathons)</p>
+            <p>Marathon • Olympic Triathlon • Century Ride</p>
+            <p>Leukemia &amp; Lymphoma Society — Team in Training</p>
+          </div>
+
+          <div class="story-cta">
+            <p>Ready to begin gently?</p>
+            <a class="btn btn-primary" href="#booking">Start a Conversation</a>
+          </div>
         </div>
       </details>
+
     </article>
 
     <article class="card quote-panel">
