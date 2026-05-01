@@ -1759,6 +1759,103 @@ section{
   }
 }
 
+
+/* Final polish: hero image breathing room, active CTAs, footer spacing */
+@media(min-width:741px){
+  .hero{
+    grid-template-columns:.84fr 1.16fr;
+    gap:38px;
+    padding-right:34px;
+  }
+
+  .hero-photo{
+    inset:42px 34px 42px 46%;
+    border-radius:34px;
+  }
+
+  .hero-photo img{
+    object-position:center center;
+    border-radius:34px;
+  }
+
+  .hero-photo::before,
+  .hero-photo::after{
+    border-radius:34px;
+  }
+
+  .hero-copy{
+    max-width:535px;
+  }
+
+  .hero .trust-inline{
+    max-width:500px;
+  }
+}
+
+/* Make CTA states feel intentional without looking like dead glow blocks */
+.btn{
+  cursor:pointer;
+}
+.btn[href^="#"]:hover{
+  transform:translateY(-2px);
+}
+.btn-primary[href^="#"]:hover{
+  box-shadow:0 12px 34px rgba(154,173,184,.22);
+}
+.btn-secondary:hover{
+  border-color:rgba(229,215,197,.30);
+  background:rgba(255,255,255,.035);
+}
+
+/* Footer spacing and hierarchy */
+.footer{
+  align-items:center;
+  padding-top:34px;
+  padding-bottom:34px;
+  gap:34px;
+}
+.footer .small-brand{
+  align-self:center;
+}
+.footer .links{
+  align-self:center;
+  justify-items:start;
+}
+.footer .newsletter{
+  max-width:520px;
+  margin-left:auto;
+}
+.legal{
+  padding-top:4px;
+  padding-bottom:30px;
+  justify-content:center;
+  border-top:1px solid var(--line);
+  margin:0 22px;
+}
+
+/* Better mobile footer balance */
+@media(max-width:740px){
+  .footer{
+    padding:30px 22px 26px;
+    gap:22px;
+  }
+
+  .footer .newsletter{
+    max-width:none;
+    margin-left:0;
+  }
+
+  .footer .links{
+    gap:12px 28px;
+  }
+
+  .legal{
+    margin:0 22px;
+    padding:18px 0 28px;
+    justify-content:flex-start;
+  }
+}
+
 </style>
 
 <!-- Google Analytics 4: replace G-XXXXXXXXXX with Jennifer's Measurement ID -->
@@ -1810,12 +1907,12 @@ section{
     <nav class="nav-links" aria-label="Primary navigation">
       <a href="#top">Home</a>
       <a href="#about">About</a>
-      <a href="#offerings">Offerings</a>
+      <a href="#start">Offerings</a>
       <a href="#workshops">Workshops</a>
-      <a href="#contact">Contact</a>
+      <a href="#lead-capture">Contact</a>
     </nav>
     <div class="actions">
-      <a class="btn btn-primary" href="#individuals">Start a Conversation</a>
+      <a class="btn btn-primary" href="#lead-capture">Start a Conversation</a>
       <button id="themeToggle" class="toggle" type="button" aria-label="Toggle color theme">
         <span class="track"><span>☾</span><span>☀</span></span>
         <span class="thumb" aria-hidden="true"></span>
@@ -1836,7 +1933,7 @@ section{
     <p>Block Therapy with Jennifer Barnett Fox is warm, grounded, and deeply human — a gentle return to breath, ease, and trust.</p>
     <p>Begin with a private session, workshop, or community offering.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#individuals">Start a Conversation</a>
+      <a class="btn btn-primary" href="#lead-capture">Start a Conversation</a>
       <a class="btn btn-secondary" href="#workshops">Explore Workshops</a>
     </div>
     <div class="trust trust-inline">
@@ -1983,7 +2080,7 @@ section{
         <li>Beginner-friendly, premium support</li>
       </ul>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Start a Conversation</a>
+        <a class="btn btn-primary" href="#lead-capture">Start a Conversation</a>
       </div>
     </article>
 
@@ -1996,7 +2093,7 @@ section{
         <li>Partnership inquiries</li>
       </ul>
       <div class="hero-actions">
-        <a class="btn btn-secondary" href="#contact">Request Workshop Info</a>
+        <a class="btn btn-secondary" href="#lead-capture">Request Workshop Info</a>
       </div>
     </article>
   </div>
@@ -2016,21 +2113,21 @@ section{
       <div class="icon sage">◌</div>
       <h3>Private Sessions</h3>
       <p>Personalized 1:1 support to help you regulate, release, and reconnect.</p>
-      <a class="btn btn-secondary" href="#contact">Learn More</a>
+      <a class="btn btn-secondary" href="#lead-capture">Learn More</a>
     </article>
 
     <article class="card pad">
       <div class="icon blue">◎</div>
       <h3>Workshops</h3>
       <p>Interactive experiences that bring nervous system tools to life in community.</p>
-      <a class="btn btn-secondary" href="#contact">Learn More</a>
+      <a class="btn btn-secondary" href="#lead-capture">Learn More</a>
     </article>
 
     <article class="card pad">
       <div class="icon sand">❦</div>
       <h3>Community Offerings</h3>
       <p>Groups and ongoing programs designed to deepen connection, resilience, and healing.</p>
-      <a class="btn btn-secondary" href="#contact">Learn More</a>
+      <a class="btn btn-secondary" href="#lead-capture">Learn More</a>
     </article>
   </div>
 </section>
@@ -2065,7 +2162,7 @@ section{
       <h2 style="margin-bottom:8px;">You do not have to do this alone.</h2>
       <p>Gentle support. Lasting change. More room to feel like yourself.</p>
     </div>
-    <a class="btn btn-primary" href="#contact">Start a Conversation</a>
+    <a class="btn btn-primary" href="#lead-capture">Start a Conversation</a>
   </article>
 </section>
 
@@ -2118,10 +2215,10 @@ section{
 
   <div class="links">
     <a href="#about">About</a>
-    <a href="#individuals">Individuals</a>
+    <a href="#lead-capture">Individuals</a>
     <a href="#workshops">Workshops</a>
-    <a href="#offerings">Offerings</a>
-    <a href="#contact">Contact</a>
+    <a href="#start">Offerings</a>
+    <a href="#lead-capture">Contact</a>
     <a href="#top">Top</a>
   </div>
 
@@ -2133,16 +2230,16 @@ section{
       <button type="button" aria-label="Submit email">→</button>
     </div>
     <div class="social-row" aria-label="Social links">
-      <a href="#" aria-label="Instagram" title="Instagram">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"></rect><circle cx="12" cy="12" r="3.4"></circle><circle cx="17.2" cy="6.8" r="1"></circle></svg>
       </a>
-      <a href="#" aria-label="Facebook" title="Facebook">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5h2V5h-2.4C10.8 5 9 6.8 9 9.6V12H7v3.4h2V21h3.6v-5.6H15l.5-3.4h-2.9V9.7c0-.8.5-1.2 1.4-1.2Z"></path></svg>
       </a>
       <a href="https://www.linkedin.com/in/jenniferbarnettfox/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 9.1h3.3V20H5.2V9.1Zm1.7-5.2a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8ZM10.5 9.1h3.1v1.5h.1c.4-.8 1.5-1.8 3.1-1.8 3.3 0 3.9 2.2 3.9 5V20h-3.3v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V20h-3.3V9.1Z"></path></svg>
       </a>
-      <a href="mailto:" aria-label="Email Jennifer" title="Email">
+      <a href="mailto:" data-needs-email="true" aria-label="Email Jennifer" title="Email">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v10H4V7Zm1.7 1.8 6.3 4.4 6.3-4.4M5.7 15.2l4.1-3M18.3 15.2l-4.1-3"></path></svg>
       </a>
     </div>
