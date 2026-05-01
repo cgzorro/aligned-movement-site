@@ -1917,10 +1917,456 @@ section{
   }
 }
 
+
+/* =========================================================
+   FINAL INDEX POLISH — header, hero, funnel, footer, mobile
+   ========================================================= */
+
+/* Header: cleaner and tighter, especially mobile */
+.header{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:22px;
+  padding:18px 22px 14px;
+}
+.header .brand{
+  min-width:0;
+}
+.header .nav-links{
+  justify-content:center;
+}
+.header .actions{
+  justify-content:flex-end;
+}
+
+/* Rounded desktop bird hero */
+@media(min-width:741px){
+  .hero{
+    grid-template-columns:.84fr 1.16fr;
+    gap:38px;
+    padding-right:34px;
+  }
+  .hero-photo{
+    inset:42px 34px 42px 46%;
+    border-radius:34px;
+    overflow:hidden;
+    border:1px solid rgba(229,215,197,.13);
+    box-shadow:0 22px 70px rgba(0,0,0,.34);
+  }
+  .hero-photo img{
+    border-radius:34px;
+    object-position:center center;
+  }
+  .hero-photo::before,
+  .hero-photo::after{
+    border-radius:34px;
+  }
+  .hero-copy{
+    max-width:535px;
+  }
+  .hero .trust-inline{
+    display:grid;
+    grid-template-columns:max-content max-content;
+    gap:8px 18px;
+    max-width:500px;
+    margin-top:18px;
+    font-size:.84rem;
+    line-height:1.4;
+  }
+  .hero .trust-inline span{
+    white-space:nowrap;
+  }
+}
+
+/* Buttons should always feel active */
+.btn{
+  cursor:pointer;
+}
+.btn:hover{
+  transform:translateY(-2px);
+}
+.btn-primary:hover{
+  box-shadow:0 12px 34px rgba(154,173,184,.22);
+}
+.btn-secondary:hover{
+  border-color:rgba(229,215,197,.30);
+  background:rgba(255,255,255,.035);
+}
+
+/* Conversion funnel + forms */
+.funnel-cards .card{
+  position:relative;
+}
+.funnel-cards .card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:18px;
+  pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.025);
+}
+.mini-form{
+  display:grid;
+  gap:13px;
+  margin-top:18px;
+}
+.mini-form label{
+  display:grid;
+  gap:7px;
+  color:var(--muted);
+  font-size:.86rem;
+  letter-spacing:.03em;
+}
+.mini-form input,
+.mini-form select,
+.mini-form textarea{
+  width:100%;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.025);
+  color:var(--text);
+  border-radius:14px;
+  padding:13px 14px;
+  font:inherit;
+  outline:none;
+}
+.mini-form textarea{
+  resize:vertical;
+}
+.mini-form input:focus,
+.mini-form select:focus,
+.mini-form textarea:focus{
+  border-color:rgba(154,173,184,.55);
+  box-shadow:0 0 0 3px rgba(154,173,184,.10);
+}
+
+/* Embedded video */
+.video-card-embed{
+  border-radius:22px;
+}
+.video-embed-wrap{
+  position:relative;
+  margin:14px;
+  overflow:hidden;
+  background:#111;
+  aspect-ratio:16/9;
+  min-height:220px;
+  border-radius:18px;
+}
+.video-embed-wrap iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* Footer spacing and social icons */
+.footer{
+  align-items:center;
+  padding-top:34px;
+  padding-bottom:34px;
+  gap:34px;
+}
+.footer .newsletter{
+  max-width:520px;
+  margin-left:auto;
+}
+.social-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+.social-row a{
+  width:42px;
+  height:42px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text);
+  background:rgba(255,255,255,.025);
+  transition:.18s ease;
+}
+.social-row a:hover{
+  transform:translateY(-1px);
+  background:rgba(255,255,255,.05);
+}
+.social-row svg{
+  width:18px;
+  height:18px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.social-row a:nth-child(2) svg,
+.social-row a:nth-child(3) svg{
+  fill:currentColor;
+  stroke:none;
+}
+.legal{
+  padding-top:18px;
+  padding-bottom:30px;
+  justify-content:center;
+  border-top:1px solid var(--line);
+  margin:0 22px;
+}
+
+/* Mobile: tightened TOC/header and above-the-fold hero */
+@media(max-width:740px){
+  body{
+    overflow-x:hidden;
+  }
+  .page{
+    padding-top:0;
+  }
+  .wrap{
+    width:100%;
+  }
+  .site{
+    border-left:0;
+    border-right:0;
+  }
+  section{
+    padding:26px 20px;
+  }
+
+  .header{
+    grid-template-columns:1fr auto;
+    gap:12px 14px;
+    padding:18px 20px 16px;
+  }
+  .header .brand{
+    display:grid;
+    grid-template-columns:58px 1fr;
+    gap:12px;
+    align-items:center;
+  }
+  .brand-mark{
+    width:54px;
+    height:54px;
+    flex-basis:54px;
+  }
+  .brand-name{
+    font-size:clamp(1.78rem,7.2vw,2.16rem);
+    line-height:.98;
+  }
+  .brand-sub{
+    font-size:.74rem;
+    letter-spacing:.20em;
+  }
+  .header .toggle{
+    grid-column:2;
+    grid-row:1;
+    justify-self:end;
+  }
+  .header .nav-links{
+    grid-column:1 / -1;
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    gap:8px;
+    width:100%;
+    font-size:.74rem;
+    letter-spacing:.12em;
+    line-height:1;
+    margin-top:4px;
+  }
+  .header .actions{
+    grid-column:1 / -1;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:12px;
+    align-items:center;
+    width:100%;
+  }
+  .header .actions .btn{
+    min-height:48px;
+    width:100%;
+    font-size:.78rem;
+    padding:13px 14px;
+  }
+  .header .actions .toggle{
+    display:none;
+  }
+
+  .hero{
+    display:flex !important;
+    flex-direction:column;
+    gap:20px;
+    padding:22px 20px 32px;
+    min-height:auto !important;
+  }
+  .hero::after{
+    display:none !important;
+  }
+  .hero-photo{
+    display:block !important;
+    position:relative !important;
+    inset:auto !important;
+    order:0;
+    width:100%;
+    aspect-ratio:16 / 10;
+    border-radius:26px;
+    overflow:hidden;
+    border:1px solid rgba(229,215,197,.14);
+    box-shadow:0 18px 44px rgba(0,0,0,.28);
+  }
+  .hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    transform:none !important;
+    filter:saturate(.86) contrast(.97) brightness(.98);
+    border-radius:26px;
+  }
+  .hero-photo::before{
+    border-radius:26px;
+    background:
+      linear-gradient(180deg,rgba(17,16,15,.06),rgba(17,16,15,.18)),
+      radial-gradient(circle at 50% 20%,transparent 0%,rgba(17,16,15,.10) 62%,rgba(17,16,15,.25) 100%);
+  }
+  .hero-photo::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:26px;
+    pointer-events:none;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+  }
+  .hero-copy{
+    order:1;
+    padding-top:0 !important;
+    max-width:100%;
+  }
+  h1{
+    font-size:clamp(3.15rem,14vw,4.35rem);
+    line-height:.96;
+    max-width:9ch;
+    margin-bottom:16px;
+  }
+  .hero-sub{
+    max-width:31ch;
+    font-size:.75rem;
+    line-height:1.45;
+    letter-spacing:.15em;
+  }
+  .hero p{
+    max-width:100%;
+    font-size:1rem;
+    line-height:1.55;
+  }
+  .hero-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .hero .trust-inline,
+  .trust,
+  .trust-inline{
+    display:grid !important;
+    grid-template-columns:1fr;
+    gap:7px;
+    max-width:100%;
+    margin-top:16px;
+    font-size:.92rem;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:14px 16px;
+    background:rgba(255,255,255,.018);
+  }
+  .hero .trust-inline span{
+    white-space:normal;
+  }
+
+  .section-head{
+    display:block;
+    margin-bottom:18px;
+  }
+  .section-head h2{
+    font-size:clamp(2.2rem,10vw,3.05rem);
+    line-height:1;
+    max-width:10ch;
+    margin-bottom:14px;
+  }
+  .grid2,
+  .grid3,
+  .about-grid,
+  .footer,
+  .video-card-embed{
+    grid-template-columns:1fr !important;
+    gap:18px;
+  }
+  .video-embed-wrap{
+    margin:12px;
+    min-height:auto;
+  }
+  .video-copy{
+    padding:22px 22px 24px;
+  }
+  .mini-form input,
+  .mini-form select,
+  .mini-form textarea{
+    font-size:16px;
+  }
+  .footer{
+    padding:30px 22px 26px;
+    gap:22px;
+  }
+  .footer .newsletter{
+    max-width:none;
+    margin-left:0;
+  }
+  .small-brand{
+    display:grid;
+    grid-template-columns:54px 1fr;
+    gap:12px;
+  }
+  .small-mark{
+    width:50px;
+    height:50px;
+  }
+  .footer .brand-name{
+    font-size:clamp(1.55rem,6.4vw,1.95rem) !important;
+    line-height:1;
+  }
+  .links{
+    grid-template-columns:1fr 1fr;
+    gap:10px 24px;
+  }
+  .social-row{
+    justify-content:flex-start;
+    gap:14px;
+  }
+  .social-row a{
+    width:46px;
+    height:46px;
+  }
+  .legal{
+    margin:0 22px;
+    padding:18px 0 28px;
+    justify-content:flex-start;
+    line-height:1.7;
+  }
+}
+
+@media(max-width:430px){
+  .header .nav-links{
+    font-size:.70rem;
+    letter-spacing:.10em;
+  }
+  h1{
+    font-size:clamp(3rem,13.6vw,4rem);
+  }
+}
+
 </style>
 
-<!-- Google Analytics 4: replace G-XXXXXXXXXX with Jennifer's Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -1929,10 +2375,19 @@ section{
 </script>
 
 
+
 <meta property="og:title" content="Jennifer Barnett Fox | Block Therapy in Kansas City">
 <meta property="og:description" content="Gentle, grounded Block Therapy for more breath, more ease, and a calmer way of living.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="og-image.jpg">
+<!-- Google Analytics 4: replace G-XXXXXXXXXX with Jennifer's Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1964,21 +2419,20 @@ section{
     </div>
   </a>
 
-  <div class="nav">
-    <nav class="nav-links" aria-label="Primary navigation">
-      <a href="#top">Home</a>
-      <a href="#about">About</a>
-      <a href="#start">Offerings</a>
-      <a href="#workshops">Workshops</a>
-      <a href="#lead-capture">Contact</a>
-    </nav>
-    <div class="actions">
-      <a class="btn btn-primary" href="#lead-capture">Start a Conversation</a>
-      <button id="themeToggle" class="toggle" type="button" aria-label="Toggle color theme">
-        <span class="track"><span>☾</span><span>☀</span></span>
-        <span class="thumb" aria-hidden="true"></span>
-      </button>
-    </div>
+  <nav class="nav-links" aria-label="Primary navigation">
+    <a href="#top">Home</a>
+    <a href="#about">About</a>
+    <a href="#start">Offerings</a>
+    <a href="#workshop-inquiry">Workshops</a>
+    <a href="#lead-capture">Contact</a>
+  </nav>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="#lead-capture">Start a Conversation</a>
+    <button id="themeToggle" class="toggle" type="button" aria-label="Toggle color theme">
+      <span class="track"><span>☾</span><span>☀</span></span>
+      <span class="thumb" aria-hidden="true"></span>
+    </button>
   </div>
 </header>
 
@@ -2027,6 +2481,7 @@ section{
   </article>
 <p style="margin-top:12px;color:rgba(240,230,216,.55);font-size:.85rem;text-align:center;">A life shaped by movement, craft, travel, and presence.</p>
 </section>
+
 
 
 <section id="start">
@@ -2082,6 +2537,7 @@ section{
     </article>
   </div>
 </section>
+
 
 
 <section id="about">
@@ -2228,6 +2684,7 @@ section{
 </section>
 
 
+
 <section id="lead-capture">
   <div class="section-head">
     <div>
@@ -2263,6 +2720,7 @@ section{
     </article>
   </div>
 </section>
+
 
 
 <footer class="footer">
