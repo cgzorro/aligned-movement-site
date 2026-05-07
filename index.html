@@ -3434,7 +3434,7 @@ html[data-theme="light"] #start .funnel-cards .card:hover{
   grid-template-columns:auto minmax(0, max-content);
   grid-template-rows:auto auto;
   column-gap:26px;
-  row-gap:18px;
+  row-gap:0;
   align-items:center;
 }
 .header > .brand .brand-mark{
@@ -3453,19 +3453,20 @@ html[data-theme="light"] #start .funnel-cards .card:hover{
 }
 .header > .brand .brand-name{
   grid-row:1;
-  line-height:.94;
+  line-height:.88;
+  margin-bottom:22px;
 }
 .header > .brand .brand-sub{
   grid-row:2;
   margin-top:0;
-  line-height:1.06;
+  line-height:1;
 }
 
 @media(max-width:740px){
   .header > .brand{
     grid-template-columns:54px minmax(0, 1fr) !important;
     column-gap:14px;
-    row-gap:10px;
+    row-gap:0;
     width:100%;
   }
   .header > .brand .brand-mark{
@@ -3477,6 +3478,10 @@ html[data-theme="light"] #start .funnel-cards .card:hover{
     justify-self:center;
     text-align:center;
     padding-right:0;
+  }
+  .header > .brand .brand-name{
+    margin-bottom:14px;
+    line-height:.90;
   }
 }
 
