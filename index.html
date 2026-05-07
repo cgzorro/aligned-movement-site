@@ -3422,6 +3422,60 @@ html[data-theme="light"] #start .funnel-cards .card:hover{
   }
 }
 
+
+
+/* =========================================================
+   LOCKED REVIEW PASS — brand wordmark optical centering
+   Purpose: keep the approved logo/mark on the left, but center
+   AlignMoveKC over Jennifer Barnett Fox inside the wordmark block.
+   ========================================================= */
+.header > .brand{
+  display:grid !important;
+  grid-template-columns:auto minmax(0, max-content);
+  grid-template-rows:auto auto;
+  column-gap:18px;
+  row-gap:2px;
+  align-items:center;
+}
+.header > .brand .brand-mark{
+  grid-column:1;
+  grid-row:1 / span 2;
+  justify-self:end;
+}
+.header > .brand .brand-name,
+.header > .brand .brand-sub{
+  grid-column:2;
+  justify-self:center;
+  text-align:center;
+  width:max-content;
+  max-width:100%;
+}
+.header > .brand .brand-name{
+  grid-row:1;
+}
+.header > .brand .brand-sub{
+  grid-row:2;
+  margin-top:0;
+}
+
+@media(max-width:740px){
+  .header > .brand{
+    grid-template-columns:54px minmax(0, 1fr) !important;
+    column-gap:12px;
+    row-gap:2px;
+    width:100%;
+  }
+  .header > .brand .brand-mark{
+    justify-self:center;
+  }
+  .header > .brand .brand-name,
+  .header > .brand .brand-sub{
+    width:100%;
+    justify-self:center;
+    text-align:center;
+  }
+}
+
 </style>
 
 
