@@ -3481,6 +3481,76 @@ html[data-theme="light"] #themeToggle .sun{
   }
 }
 
+
+/* Targeted mobile brand centering + active toggle fix */
+#themeToggle{
+  pointer-events:auto !important;
+  z-index:20 !important;
+  touch-action:manipulation;
+}
+
+#themeToggle::before{
+  transform:translateX(0) !important;
+}
+
+html[data-theme="light"] #themeToggle::before{
+  transform:translateX(25px) !important;
+}
+
+@media(max-width:740px){
+  .header .brand,
+  header .brand,
+  .header-inner .brand{
+    width:100%;
+    display:grid !important;
+    grid-template-columns:64px 1fr 64px !important;
+    align-items:center !important;
+    gap:10px !important;
+  }
+
+  .header .brand-mark,
+  header .brand-mark,
+  .header-inner .brand-mark{
+    grid-column:1;
+    justify-self:center;
+  }
+
+  .header .brand > div:not(.brand-mark),
+  header .brand > div:not(.brand-mark),
+  .header-inner .brand > div:not(.brand-mark){
+    grid-column:2;
+    text-align:center !important;
+    justify-self:center !important;
+    width:100%;
+  }
+
+  .brand-name,
+  .brand-sub{
+    text-align:center !important;
+  }
+
+  .header .actions,
+  header .actions,
+  .header-inner .actions{
+    display:grid !important;
+    grid-template-columns:1fr auto !important;
+    gap:12px !important;
+    align-items:center !important;
+    width:100% !important;
+  }
+
+  .header .actions .btn,
+  header .actions .btn,
+  .header-inner .actions .btn{
+    width:100% !important;
+  }
+
+  #themeToggle{
+    justify-self:end !important;
+    margin-left:0 !important;
+  }
+}
+
 </style>
 
 <script>
@@ -4118,96 +4188,33 @@ html[data-theme="light"] #themeToggle .sun{
 </main>
 </div>
 
-<script>
-(function(){
-  const root = document.documentElement;
-  const toggle = document.getElementById('themeToggle');
-  root.setAttribute('data-theme', localStorage.getItem('jbf-theme') || 'dark');
-  toggle.addEventListener('click', () => {
-    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('jbf-theme', next);
-  });
-})();
-</script>
-
-<script>
-(function(){
-  const slides = Array.from(document.querySelectorAll('.about-slider .slide'));
-  if (!slides.length) return;
-  let index = 0;
-  let timer = null;
-
-  function show(nextIndex){
-    slides[index].classList.remove('active');
-    index = nextIndex % slides.length;
-    slides[index].classList.add('active');
-  }
-
-  function start(){
-    stop();
-    timer = setInterval(function(){ show(index + 1); }, 7200);
-  }
-
-  function stop(){
-    if (timer) clearInterval(timer);
-  }
-
-  const slider = document.querySelector('.about-slider');
-  if (slider) {
-    slider.addEventListener('mouseenter', stop);
-    slider.addEventListener('mouseleave', start);
-  }
-
-  start();
-})();
-</script>
-
-
-<script>
-(function(){
-  const expander = document.querySelector('.bio-expander');
-  const aboutGrid = document.querySelector('.about-grid');
-  if (!expander || !aboutGrid) return;
-
-  function syncBioOpen(){
-    aboutGrid.classList.toggle('bio-open', expander.open);
-  }
-
-  expander.addEventListener('toggle', syncBioOpen);
-  syncBioOpen();
-})();
-</script>
-
 
 <script>
 (function(){
   const root = document.documentElement;
   const toggle = document.getElementById('themeToggle');
-  if (!toggle) return;
 
-  const saved = localStorage.getItem('alignmovekc-theme');
-  if (saved === 'light' || saved === 'dark') {
-    root.setAttribute('data-theme', saved);
-  } else if (!root.getAttribute('data-theme')) {
-    root.setAttribute('data-theme', 'dark');
+  function setTheme(theme){
+    root.setAttribute('data-theme', theme);
+    try { localStorage.setItem('alignmovekc-theme', theme); } catch(e) {}
+    if (toggle) {
+      toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      toggle.setAttribute('data-active-theme', theme);
+    }
   }
 
-  function syncLabel(){
-    const current = root.getAttribute('data-theme') || 'dark';
-    toggle.setAttribute('aria-label', current === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-    toggle.setAttribute('data-active-theme', current);
+  let saved = null;
+  try { saved = localStorage.getItem('alignmovekc-theme'); } catch(e) {}
+  setTheme(saved === 'light' || saved === 'dark' ? saved : (root.getAttribute('data-theme') || 'dark'));
+
+  if (toggle) {
+    toggle.addEventListener('click', function(event){
+      event.preventDefault();
+      event.stopPropagation();
+      const current = root.getAttribute('data-theme') || 'dark';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
   }
-
-  toggle.addEventListener('click', function(){
-    const current = root.getAttribute('data-theme') || 'dark';
-    const next = current === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('alignmovekc-theme', next);
-    syncLabel();
-  });
-
-  syncLabel();
 })();
 </script>
 
