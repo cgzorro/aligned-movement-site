@@ -5757,6 +5757,53 @@ html[data-theme="light"] .perch-segments label{
   color:rgba(250,242,229,.90) !important;
 }
 
+
+/* Light-mode Perch final refinement: slightly brighter card + centered CTA */
+html[data-theme="light"] .perch-card,
+html[data-theme="light"] .newsletter-card{
+  background:
+    linear-gradient(90deg, rgba(31,27,23,.84), rgba(58,49,39,.74) 48%, rgba(28,25,22,.86) 100%) !important;
+}
+
+html[data-theme="light"] .perch-card::before,
+html[data-theme="light"] .newsletter-card::before{
+  opacity:.70 !important;
+  filter:saturate(.82) contrast(.96) brightness(1.05) !important;
+}
+
+html[data-theme="light"] .perch-card::after,
+html[data-theme="light"] .newsletter-card::after{
+  background:
+    radial-gradient(circle at 51% 28%, rgba(246,230,204,.18), transparent 23%),
+    radial-gradient(circle at 78% 44%, rgba(178,135,82,.20), transparent 36%),
+    linear-gradient(90deg, rgba(17,16,15,.06), rgba(17,16,15,.48) 50%, rgba(17,16,15,.68)),
+    radial-gradient(circle at 52% 72%, rgba(17,16,15,.05), rgba(17,16,15,.54) 72%) !important;
+}
+
+/* Center the CTA under the entire segmented form */
+.segmented-perch-form{
+  grid-template-columns:minmax(160px,.42fr) minmax(230px,1fr) !important;
+  justify-content:center !important;
+}
+
+.segmented-perch-form > button{
+  grid-column:1 / -1 !important;
+  justify-self:center !important;
+  min-width:300px !important;
+  margin-top:8px !important;
+}
+
+@media(max-width:900px){
+  .segmented-perch-form{
+    grid-template-columns:1fr !important;
+  }
+
+  .segmented-perch-form > button{
+    width:100% !important;
+    min-width:0 !important;
+  }
+}
+
 </style>
 
 <script>
