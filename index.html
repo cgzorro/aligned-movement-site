@@ -5242,6 +5242,104 @@ html[data-theme="dark"] .newsletter-card .eyebrow{
   }
 }
 
+
+/* The Perch segmented signup form */
+.segmented-perch-form{
+  display:grid !important;
+  grid-template-columns:1fr auto !important;
+  gap:16px !important;
+  align-items:end !important;
+  max-width:820px !important;
+  margin:32px auto 0 !important;
+}
+
+.perch-fields{
+  display:grid;
+  grid-template-columns:minmax(160px,.45fr) minmax(240px,1fr);
+  gap:12px;
+}
+
+.perch-fields input{
+  width:100%;
+}
+
+.perch-segments{
+  grid-column:1 / -1;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  border:0;
+  padding:4px 0 0;
+  margin:0;
+}
+
+.perch-segments legend{
+  width:100%;
+  margin-bottom:6px;
+  color:rgba(236,224,206,.72);
+  font-size:.72rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  text-align:center;
+}
+
+.perch-segments label{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 13px;
+  border-radius:999px;
+  border:1px solid rgba(236,224,206,.18);
+  background:rgba(17,16,15,.34);
+  color:rgba(246,238,226,.82);
+  font-size:.86rem;
+  cursor:pointer;
+  backdrop-filter:blur(8px);
+}
+
+.perch-segments input{
+  width:14px;
+  height:14px;
+  accent-color:#b9cadd;
+}
+
+.segmented-perch-form > button{
+  min-height:52px;
+  align-self:start;
+}
+
+.honeypot{
+  position:absolute !important;
+  left:-9999px !important;
+  opacity:0 !important;
+}
+
+@media(max-width:860px){
+  .segmented-perch-form{
+    grid-template-columns:1fr !important;
+  }
+
+  .perch-fields{
+    grid-template-columns:1fr;
+  }
+
+  .segmented-perch-form > button{
+    width:100%;
+  }
+}
+
+@media(max-width:520px){
+  .perch-segments{
+    justify-content:flex-start;
+  }
+
+  .perch-segments label{
+    width:100%;
+    justify-content:flex-start;
+  }
+}
+
 </style>
 
 <script>
@@ -5777,10 +5875,30 @@ html[data-theme="dark"] .newsletter-card .eyebrow{
     <h2>The Perch</h2>
     <div class="perch-divider" aria-hidden="true"><span></span></div>
     <p>Stay connected with gentle notes, thoughtful resources and updates on private sessions, workshops and community offerings.</p>
-    <form class="perch-form" action="mailto:alignmovekc@gmail.com" method="post" enctype="text/plain" data-provider="pending-newsletter-backend" onsubmit="event.preventDefault(); alert(\'Newsletter signup is ready for backend connection.\');">
-      <input type="email" name="email" placeholder="Email address" aria-label="Email address">
-      <button class="btn btn-primary" type="submit">Join The Perch</button>
-    </form>
+    
+<form class="newsletter-form perch-form segmented-perch-form" 
+      action="https://formspree.io/f/REPLACE_WITH_FORM_ID" 
+      method="POST">
+  <input type="hidden" name="_subject" value="New The Perch Newsletter Signup">
+  <input type="hidden" name="source" value="AlignMoveKC website — The Perch">
+  <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <div class="perch-fields">
+    <input type="text" name="first_name" placeholder="First name">
+    <input type="email" name="email" placeholder="Email address" required>
+  </div>
+
+  <fieldset class="perch-segments">
+    <legend>I’m interested in</legend>
+    <label><input type="checkbox" name="interest[]" value="Private sessions"> <span>Private sessions</span></label>
+    <label><input type="checkbox" name="interest[]" value="Workshops"> <span>Workshops</span></label>
+    <label><input type="checkbox" name="interest[]" value="Community offerings"> <span>Community offerings</span></label>
+    <label><input type="checkbox" name="interest[]" value="Gentle resources"> <span>Gentle resources</span></label>
+  </fieldset>
+
+  <button class="btn btn-primary" type="submit">Join The Perch</button>
+</form>
+
   </div>
 </section>
 
