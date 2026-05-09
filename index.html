@@ -5420,6 +5420,185 @@ html[data-theme="light"] .perch-segments label{
   color:rgba(61,51,41,.80) !important;
 }
 
+
+/* FINAL correction: The Perch remains a premium dark feature card in both themes */
+html[data-theme="light"] .perch-card,
+html[data-theme="light"] .newsletter-card{
+  background:
+    linear-gradient(90deg, rgba(17,16,15,.90), rgba(38,32,26,.82) 48%, rgba(17,16,15,.92) 100%) !important;
+  border-color:rgba(236,224,206,.16) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.035),
+    0 28px 82px rgba(65,54,43,.18) !important;
+}
+
+html[data-theme="light"] .perch-card::before,
+html[data-theme="light"] .newsletter-card::before{
+  opacity:.62 !important;
+  filter:saturate(.76) contrast(.94) brightness(.95) !important;
+}
+
+html[data-theme="light"] .perch-card::after,
+html[data-theme="light"] .newsletter-card::after{
+  background:
+    radial-gradient(circle at 51% 28%, rgba(246,230,204,.13), transparent 22%),
+    radial-gradient(circle at 80% 44%, rgba(178,135,82,.18), transparent 36%),
+    linear-gradient(90deg, rgba(17,16,15,.10), rgba(17,16,15,.58) 50%, rgba(17,16,15,.75)),
+    radial-gradient(circle at 52% 72%, rgba(17,16,15,.08), rgba(17,16,15,.62) 72%) !important;
+}
+
+html[data-theme="light"] .perch-card .eyebrow,
+html[data-theme="light"] .newsletter-card .eyebrow{
+  color:rgba(236,224,206,.82) !important;
+  text-shadow:0 8px 28px rgba(0,0,0,.28) !important;
+}
+
+html[data-theme="light"] .perch-card h2,
+html[data-theme="light"] .newsletter-card h2{
+  color:var(--text) !important;
+  text-shadow:0 16px 44px rgba(0,0,0,.28) !important;
+}
+
+html[data-theme="light"] .perch-card p,
+html[data-theme="light"] .newsletter-card p{
+  color:rgba(246,238,226,.90) !important;
+  text-shadow:0 10px 28px rgba(0,0,0,.24) !important;
+}
+
+html[data-theme="light"] .perch-divider::before,
+html[data-theme="light"] .perch-divider::after{
+  background:linear-gradient(90deg, transparent, rgba(236,224,206,.48)) !important;
+}
+
+html[data-theme="light"] .perch-divider::after{
+  background:linear-gradient(90deg, rgba(236,224,206,.48), transparent) !important;
+}
+
+html[data-theme="light"] .perch-divider span::before{
+  background:rgba(197,169,139,.66) !important;
+}
+
+/* Compact, premium segmented newsletter form */
+.segmented-perch-form{
+  display:grid !important;
+  grid-template-columns:minmax(160px,.42fr) minmax(230px,1fr) auto !important;
+  gap:12px !important;
+  align-items:center !important;
+  max-width:880px !important;
+  margin:30px auto 0 !important;
+}
+
+.perch-fields{
+  display:contents !important;
+}
+
+.segmented-perch-form input[type="text"],
+.segmented-perch-form input[type="email"]{
+  min-height:52px !important;
+  border-radius:999px !important;
+  background:rgba(17,16,15,.48) !important;
+  border:1px solid rgba(236,224,206,.24) !important;
+  color:var(--text) !important;
+  padding:0 20px !important;
+}
+
+.segmented-perch-form input::placeholder{
+  color:rgba(246,238,226,.55) !important;
+}
+
+.segmented-perch-form > button{
+  min-height:52px !important;
+  white-space:nowrap !important;
+  padding-left:28px !important;
+  padding-right:28px !important;
+  width:auto !important;
+}
+
+.perch-segments{
+  grid-column:1 / -1 !important;
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:center !important;
+  gap:9px !important;
+  border:0 !important;
+  padding:8px 0 0 !important;
+  margin:0 !important;
+}
+
+.perch-segments legend{
+  width:100% !important;
+  margin-bottom:4px !important;
+  color:rgba(236,224,206,.68) !important;
+  font-size:.68rem !important;
+  letter-spacing:.22em !important;
+  text-transform:uppercase !important;
+  text-align:center !important;
+}
+
+.perch-segments label{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:7px !important;
+  padding:8px 12px !important;
+  border-radius:999px !important;
+  border:1px solid rgba(236,224,206,.16) !important;
+  background:rgba(17,16,15,.32) !important;
+  color:rgba(246,238,226,.80) !important;
+  font-size:.82rem !important;
+  cursor:pointer !important;
+  backdrop-filter:blur(8px);
+}
+
+.perch-segments input{
+  width:13px !important;
+  height:13px !important;
+  accent-color:#b9cadd;
+}
+
+html[data-theme="light"] .segmented-perch-form input[type="text"],
+html[data-theme="light"] .segmented-perch-form input[type="email"]{
+  background:rgba(17,16,15,.48) !important;
+  border-color:rgba(236,224,206,.24) !important;
+  color:var(--text) !important;
+}
+
+html[data-theme="light"] .perch-segments legend{
+  color:rgba(236,224,206,.68) !important;
+}
+
+html[data-theme="light"] .perch-segments label{
+  background:rgba(17,16,15,.32) !important;
+  border-color:rgba(236,224,206,.16) !important;
+  color:rgba(246,238,226,.80) !important;
+}
+
+@media(max-width:900px){
+  .segmented-perch-form{
+    grid-template-columns:1fr !important;
+    max-width:620px !important;
+  }
+
+  .perch-fields{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+  }
+
+  .segmented-perch-form > button{
+    width:100% !important;
+  }
+}
+
+@media(max-width:520px){
+  .perch-segments{
+    justify-content:flex-start !important;
+  }
+
+  .perch-segments label{
+    width:100% !important;
+  }
+}
+
 </style>
 
 <script>
