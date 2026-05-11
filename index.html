@@ -6235,6 +6235,55 @@ html[data-theme="light"] .perch-section .perch-submit {
   margin-right: auto !important;
 }
 
+
+/* =========================================================
+   FINAL CTA ROUNDING PASS
+   Carry the soft Block Therapy / rounded-block language through the site.
+   Scoped to CTA-style controls only.
+   ========================================================= */
+
+.btn,
+.story-cta,
+.perch-submit {
+  border-radius: 22px !important;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary,
+.story-cta,
+.perch-submit {
+  overflow: hidden !important;
+}
+
+/* Slightly fuller rounding for compact/mobile button states */
+@media (max-width: 640px) {
+  .btn,
+  .story-cta,
+  .perch-submit {
+    border-radius: 20px !important;
+  }
+}
+
+
+/* Final copy polish + desktop-only Perch line break */
+.perch-web-break {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .perch-web-break {
+    display: none;
+  }
+}
+
+/* Keep explicit final heading breaks elegant on small screens */
+@media (max-width: 640px) {
+  #learn .section-head h2 br,
+  .cta-band h2 br {
+    display: block;
+  }
+}
+
 </style>
 
 <script>
@@ -6347,14 +6396,7 @@ html[data-theme="light"] .perch-section .perch-submit {
   <article class="card video-card video-card-embed video-card-safe">
     <div class="video-embed-wrap">
       <iframe
-        
-        src="https://www.youtube-nocookie.com/embed/yiBjtwJgnlw?rel=0&modestbranding=1&playsinline=1"
-        title="Block Therapy Introduction Video"
-        loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        
+        src="https://www.youtube.com/embed/yiBjtwJgnlw?rel=0&modestbranding=1&playsinline=1"
         title="Block Therapy introduction video"
         loading="lazy"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -6609,7 +6651,7 @@ html[data-theme="light"] .perch-section .perch-submit {
   <div class="section-head">
     <div>
       <div class="eyebrow">Resources / Learn</div>
-      <h2>Explore how Block Therapy supports the body.</h2>
+      <h2>Explore how <br>Block Therapy <br>supports the body.</h2>
     </div>
     </div>
 
@@ -6689,7 +6731,7 @@ html[data-theme="light"] .perch-section .perch-submit {
 <section>
   <article class="card cta-band">
     <div>
-      <h2 style="margin-bottom:8px;">You do not have to do this alone.</h2>
+      <h2 style="margin-bottom:8px;">You do not have to <br>do this alone.</h2>
       <p>Gentle support. Lasting change. More room to feel like yourself.</p>
     </div>
     <a class="btn btn-primary" href="#lead-capture">Start a Conversation</a>
@@ -6770,7 +6812,7 @@ html[data-theme="light"] .perch-section .perch-submit {
         <div class="perch-divider" aria-label="Newsletter section"><span>Newsletter</span></div>
 
         <p class="perch-copy">
-          Stay connected with gentle notes, thoughtful resources and updates on private sessions,
+          Stay connected with gentle notes, thoughtful resources and updates on<br class="perch-web-break"> private sessions,
           workshops and community offerings.
         </p>
 
