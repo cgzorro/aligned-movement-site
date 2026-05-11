@@ -6284,6 +6284,70 @@ html[data-theme="light"] .perch-section .perch-submit {
   }
 }
 
+
+/* =========================================================
+   FINAL LIGHT-MODE HERO POLISH
+   Warmer, richer, less washed-out hero image treatment.
+   Dark mode and all other site sections remain untouched.
+   ========================================================= */
+
+html[data-theme="light"] .hero-photo img {
+  filter: saturate(1.12) contrast(1.06) brightness(.96) sepia(.08) !important;
+}
+
+html[data-theme="light"] .hero-photo::before {
+  background:
+    linear-gradient(90deg,
+      rgba(246,239,226,.54) 0%,
+      rgba(246,239,226,.30) 17%,
+      rgba(246,239,226,.08) 38%,
+      rgba(246,239,226,.02) 68%,
+      rgba(212,176,121,.08) 100%),
+    linear-gradient(180deg,
+      rgba(232,205,157,.07),
+      rgba(232,205,157,.13)) !important;
+}
+
+html[data-theme="light"] .hero-photo::after {
+  box-shadow:
+    inset 0 0 0 1px rgba(92,74,52,.12),
+    inset 38px 0 74px rgba(246,239,226,.15),
+    inset 0 -70px 100px rgba(197,160,104,.10),
+    0 20px 46px rgba(84,70,52,.14) !important;
+}
+
+html[data-theme="light"] .hero::after {
+  opacity: .08 !important;
+}
+
+html[data-theme="light"] .hero-sub {
+  color: rgba(103,84,62,.76) !important;
+}
+
+html[data-theme="light"] .hero p {
+  color: rgba(70,58,45,.78) !important;
+}
+
+html[data-theme="light"] .trust {
+  color: rgba(101,88,73,.82) !important;
+}
+
+@media(max-width:740px) {
+  html[data-theme="light"] .hero-photo img {
+    filter: saturate(1.08) contrast(1.04) brightness(.98) sepia(.06) !important;
+  }
+
+  html[data-theme="light"] .hero-photo::before {
+    background:
+      linear-gradient(90deg,
+        rgba(246,239,226,.30),
+        rgba(246,239,226,.06) 56%),
+      linear-gradient(180deg,
+        rgba(232,205,157,.05),
+        rgba(232,205,157,.12)) !important;
+  }
+}
+
 </style>
 
 <script>
