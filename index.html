@@ -6382,6 +6382,80 @@ html[data-theme="light"] .trust {
   }
 }
 
+
+/* =========================================================
+   MOBILE PERCH INTEREST CHIP FIX
+   Fix distorted checkbox spacing/bar on mobile.
+   Scope: Perch mobile only.
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .perch-section .perch-interests {
+    width: min(420px, 100%) !important;
+    text-align: left !important;
+    align-self: center !important;
+  }
+
+  .perch-section .perch-interests legend {
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+    text-align: left !important;
+  }
+
+  .perch-section .perch-chip-row {
+    width: 100% !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+  }
+
+  .perch-section .perch-chip-row label {
+    width: 100% !important;
+    min-height: 50px !important;
+    display: grid !important;
+    grid-template-columns: 18px 1fr !important;
+    column-gap: 12px !important;
+    align-items: center !important;
+    justify-content: start !important;
+    justify-items: start !important;
+    text-align: left !important;
+    padding: 0 18px !important;
+  }
+
+  .perch-section .perch-chip-row label input[type="checkbox"] {
+    appearance: auto !important;
+    -webkit-appearance: checkbox !important;
+    display: block !important;
+    width: 16px !important;
+    min-width: 16px !important;
+    max-width: 16px !important;
+    height: 16px !important;
+    min-height: 16px !important;
+    max-height: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 0 0 16px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 3px !important;
+    accent-color: var(--blue) !important;
+  }
+
+  .perch-section .perch-chip-row label span {
+    display: block !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    white-space: normal !important;
+  }
+}
+
 </style>
 
 <script>
