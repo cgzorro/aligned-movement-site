@@ -6885,6 +6885,64 @@ html[data-theme="light"] .qr-share-card {
   }
 }
 
+
+/* =========================================================
+   FINAL QR FOOTER REFINEMENT
+   Tighter horizontal footprint + simpler action hierarchy.
+   Scope: QR share/save footer only.
+   ========================================================= */
+
+.qr-share-footer .qr-share-card {
+  max-width: 960px !important;
+  gap: 14px !important;
+  padding: 17px 20px !important;
+}
+
+.qr-share-footer .qr-share-copy p {
+  max-width: 43ch !important;
+  margin-bottom: 10px !important;
+}
+
+.qr-share-footer .qr-share-actions {
+  gap: 8px !important;
+}
+
+.qr-share-footer .qr-share-actions .btn {
+  min-width: 152px !important;
+}
+
+.qr-share-footer .qr-share-social {
+  margin-top: 7px !important;
+}
+
+@media (min-width: 821px) {
+  .qr-share-footer .qr-share-card {
+    grid-template-columns: minmax(0, .92fr) auto !important;
+  }
+}
+
+@media (max-width: 820px) {
+  .qr-share-footer .qr-share-card {
+    max-width: 680px !important;
+    gap: 14px !important;
+  }
+
+  .qr-share-footer .qr-share-copy p {
+    max-width: 48ch !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .qr-share-footer .qr-share-card {
+    padding: 15px !important;
+    gap: 12px !important;
+  }
+
+  .qr-share-footer .qr-share-actions .btn {
+    min-width: 0 !important;
+  }
+}
+
 </style>
 
 <meta property="og:title" content="AlignMoveKC | Block Therapy in Kansas City">
@@ -7441,11 +7499,10 @@ html[data-theme="light"] .qr-share-card {
     <div class="qr-share-copy">
       <span class="eyebrow">Share / Save</span>
       <h3 class="qr-title-final"><span class="qr-title-line">Share AlignMoveKC</span><br><span>in one scan.</span></h3>
-      <p>Scan to open the site, then save Jennifer’s contact, send an email, schedule an intro conversation, or share the page with someone who may benefit.</p>
+      <p>Scan to open the site, then save Jennifer’s contact, schedule an intro conversation, or share the page with someone who may benefit.</p>
 
       <div class="qr-share-actions">
         <a class="btn btn-primary" href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AN:Fox;Jennifer;Barnett;;%0AFN:Jennifer%20Barnett%20Fox%0AORG:AlignMoveKC%0ATITLE:Block%20Therapy%20Instructor%0AEMAIL;TYPE=INTERNET:hello@alignmovekc.com%0AURL:https://alignmovekc.com/%0AADR;TYPE=WORK:;;Kansas%20City;MO;;;%0ANOTE:Block%20Therapy%20Instructor%20and%20Affiliate.%20Private%20sessions,%20workshops%20and%20community%20offerings%20in%20Kansas%20City.%0AEND:VCARD%0A" download="jennifer-barnett-fox-alignmovekc.vcf">Save Contact</a>
-        <a class="btn btn-secondary" href="mailto:hello@alignmovekc.com?subject=AlignMoveKC%20Inquiry">Email Jennifer</a>
         <a class="btn btn-secondary" href="https://calendly.com/alignmovekc" target="_blank" rel="noopener">Schedule Intro</a>
       </div>
       <div class="qr-share-social" aria-label="Quick links">
